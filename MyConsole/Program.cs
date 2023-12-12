@@ -2,14 +2,15 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace MyConsole
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace MyConsole {
+    
+    class Program {
+
+        static void Main(string[] args) {
+
             Console.WriteLine("Checking settings...");
             string connectionString = Environment.GetEnvironmentVariable("DB_CONN_STR");
+
             if (string.IsNullOrEmpty(connectionString) == true) {
                 Console.WriteLine("You must set an ENV named DB_CONN_STR with your connection string!");
                 return;
@@ -18,6 +19,7 @@ namespace MyConsole
                 Console.WriteLine("Connection string found.");
             }
 
+            // string query = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE';";
             string query = "SELECT OrderID, CustomerID FROM dbo.Orders;";
 
             Console.WriteLine("Running a query against Orders database table...");
