@@ -20,6 +20,6 @@ docker build -t cdwmsft.azurecr.io/tlstesting:5.0 .
 
 docker push cdwmsft.azurecr.io/tlstesting:5.0
 
-docker run -e DB_CONN_STR="$DB_CONN_STR" cdwmsft.azurecr.io/tlstesting:5.0
+docker run --rm -e DB_CONN_STR="$DB_CONN_STR" cdwmsft.azurecr.io/tlstesting:5.0
 
 ```
