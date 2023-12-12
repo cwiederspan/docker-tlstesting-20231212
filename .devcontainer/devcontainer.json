@@ -1,0 +1,10 @@
+{
+    "image": "mcr.microsoft.com/dotnet/sdk:5.0",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csdevkit"
+            ]
+        }
+    }
+}
